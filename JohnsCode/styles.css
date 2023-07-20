@@ -1,0 +1,329 @@
+/*   Hierarchy is Container > Outerbox > Box Column > Box> */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@font-face {
+  font-family: Graphik;
+  src: url(GraphikRegular.otf);
+}
+
+@font-face {
+  font-family: Graphikbold;
+  src: url(GraphikWide-Bold.otf);
+}
+
+
+
+.container {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+
+  text-align: center;
+  align-items: center;
+}
+
+.outerbox {
+  width: 100%;
+  padding: 5px;
+  display: inline-flex;
+
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.boxtitle {
+  font-weight: bold;
+  font-size: 12px;
+  font-family: Graphikbold;
+
+  text-align: center;
+  align-items: center;
+  width: 130px;
+}
+
+.boxcolumn {
+  width: 150px;
+  padding: 5px;
+
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+
+}
+
+.boxcolumn2 {
+  width: 150px;
+  padding: 5px;
+
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+
+}
+
+.boxcolumn3 {
+  width: 150px;
+  padding: 5px;
+
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+
+}
+
+.boxcolumn4 {
+  width: 150px;
+  padding: 5px;
+
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+
+}
+
+.boxcolumn5 {
+  width: 150px;
+  padding: 5px;
+
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+
+}
+
+.box {
+  height: 125px;
+  width: 125px;
+  border: 2px solid black;
+  display: grid;
+border-radius: 5%;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  color: black;
+
+
+  justify-content: center;
+  vertical-align: middle;
+  text-align: center;
+  align-items: center;
+
+  padding: 3px;
+  margin-top: 10px;
+
+}
+
+
+.boxcolor1 {
+  transition: background-color 1000ms;
+}
+
+.boxcolor1:hover {
+  background-image: linear-gradient(#FA5252, #FA5252, #C92A2A);
+  color: black;
+  border: 2px solid black;
+  align-items: center;
+
+}
+
+.boxcolor2 {
+  transition: background-color 1000ms;
+}
+
+.boxcolor2:hover {
+  background-image: linear-gradient(#FAB005, #FAB005, #E67700);
+  color: black;
+  border: 2px solid black;
+  align-items: center;
+
+}
+
+.boxcolor3 {
+  transition: background-color 1000ms;
+}
+
+.boxcolor3:hover {
+  background-image: linear-gradient(#228BE6, #228BE6, #1864AB);
+  color: black;
+  border: 2px solid black;
+  align-items: center;
+
+}
+
+.boxcolor4 {
+  transition: background-color 1000ms;
+}
+
+.boxcolor4:hover {
+  background-image: linear-gradient(#40C057, #40C057, #2B8A3E);
+  color: black;
+  border: 2px solid black;
+  align-items: center;
+
+}
+
+/* Javascript will bring in these classes */
+.active1 {
+  height: 125px;
+  width: 125px;
+  border: 3px solid black;
+  ;
+  display: grid;
+  vertical-align: middle;
+  text-align: center;
+  padding: 3px;
+  margin-top: 10px;
+  font-size: 14px;
+  background-image: linear-gradient(#FA5252, #FA5252, #C92A2A);
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  align-items: center;
+  border-radius: 5%;
+
+
+}
+
+.active2 {
+  height: 125px;
+  width: 125px;
+  border: 3px solid black;
+  ;
+  display: grid;
+  vertical-align: top;
+  text-align: center;
+  padding: 3px;
+  margin-top: 10px;
+  font-size: 14px;
+  background-image: linear-gradient(#FAB005, #FAB005, #E67700);
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  align-items: center;
+  border-radius: 5%;
+
+}
+
+.active3 {
+  height: 125px;
+  width: 125px;
+  border: 3px solid black;
+  ;
+  display: grid;
+  vertical-align: top;
+  text-align: center;
+  padding: 3px;
+  margin-top: 10px;
+  font-size: 14px;
+  background-image: linear-gradient(#228BE6, #228BE6, #1864AB);
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  align-items: center;
+  border-radius: 5%;
+
+}
+
+.active4 {
+  height: 125px;
+  width: 125px;
+  border: 3px solid black;
+
+  display: grid;
+  vertical-align: top;
+  text-align: center;
+  padding: 3px;
+  margin-top: 10px;
+  font-size: 14px;
+  background-image: linear-gradient(#40C057, #40C057, #2B8A3E);
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  align-items: center;
+  border-radius: 5%;
+
+}
+
+/*  These are outside of the container for the Severity Output  */
+.outputbox {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  left: 50%;
+}
+
+.severityoutput {
+  width: 250px;
+  height: 50px;
+  text-align: center;
+  padding-top: 20px;
+  font-family: Graphikbold;
+
+  align-items: center;
+  justify-content: center;
+  color: black;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.severityone {
+  font-size: 25px;
+  text-align: center;
+  background-image: linear-gradient(#FA5252, #FA5252, #C92A2A);
+  color: black;
+  margin-top: 5px;
+  border: 3px solid black;
+  border-radius: 5%;
+
+}
+
+.severitytwo {
+  font-size: 25px;
+  text-align: center;
+  background-image: linear-gradient(#FAB005, #FAB005, #E67700);
+  margin-top: 5px;
+  border: 3px solid black;
+  border-radius: 5%;
+
+
+}
+
+.severitythree {
+  font-size: 25px;
+  text-align: center;
+  background-image: linear-gradient(#228BE6, #228BE6, #1864AB);
+  color: black;
+  margin-top: 5px;
+  border: 3px solid black;
+  border-radius: 5%;
+
+
+}
+
+.severityfour {
+  font-size: 25px;
+  text-align: center;
+  background-image: linear-gradient(#40C057, #40C057, #2B8A3E);
+  color: black;
+  margin-top: 5px;
+  border: 3px solid black;
+  border-radius: 5%;
+
+
+
+}
+
+.topbar {
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: Graphikbold;
+  font-size: 70px;
+}
+
+.logo {
+  width: 20%;
+  position: absolute;
+  left: 60%;
+  opacity: .2;
+}
+
+.seeya {
+  display: none;
+}

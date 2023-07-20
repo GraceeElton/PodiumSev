@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+
+
+
+    <link rel="icon" href="tpsalarm.png">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+
+    <title>Severity Model</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="topbar"> Defect Severity </div>
+
+        <div class="outerbox">
+
+            <div class="boxcolumn">
+                <div class="boxtitle">Performance</div>
+                <div id="p1" class="box boxcolor1" onclick="activep1(); check();">Multiple Products Affected</div>
+                <div id="p2" class="box boxcolor2" onclick="activep2(); check();">Major Product/Feature Down</div>
+                <div id="p3" class="box boxcolor3" onclick="activep3(); check();">Feature issue or poor system performance</div>
+                <div id="p4" class="box boxcolor4" onclick="activep4(); check();">No feature issue or configuration issues</div>
+            </div>
+
+            <div class="boxcolumn2">
+                <div class="boxtitle">Financial Impact</div>
+                <div id="f1" class="box boxcolor1" onclick="activef1(); check();">Direct financial impact and reputational damage. <br><br> OR ARR > 100k</div>
+                <div id="f2" class="box boxcolor2" onclick="activef2(); check();">Indirect financial/lead collection impact <strong>AND</strong> reputational damage.<br> OR ARR > 50k</div>
+                <div id="f3" class="box boxcolor3" onclick="activef3(); check();">Indirect financial/lead collection impact <strong>OR</strong> reputational damage</div>
+                <div id="f4" class="box boxcolor4" onclick="activef4(); check();">No financial impact nor reputational damage</div>
+            </div>
+
+
+            <div class="boxcolumn3">
+                <div class="boxtitle">Work Impact</div>
+                <div id="w1" class="box boxcolor1" onclick="activew1(); check();">Unable to navigate site/app or work stoppage</div>
+                <div id="w2" class="box boxcolor2" onclick="activew2(); check();">No workaround and work is slowed</div>
+                <div id="w3" class="box boxcolor3" onclick="activew3(); check();">Workaround exists, but efficiency impacted</div>
+                <div id="w4" class="box boxcolor4" onclick="activew4(); check();">Workaround exists, minimal impact to work flow</div>
+            </div>
+
+            <div class="boxcolumn4">
+                <div class="boxtitle">Reach</div>
+                <div id="r1" class="box boxcolor1" onclick="activer1(); check();">Every ORG</div>
+                <div id="r2" class="box boxcolor2" onclick="activer2(); check();">Multiple ORGs</div>
+                <div id="r3" class="box boxcolor3" onclick="activer3(); check();">Single ORG</div>
+                <div id="r4" class="box boxcolor4" onclick="activer4(); check();">Single user</div>
+            </div>
+
+            <div class="boxcolumn5">
+                <div class="boxtitle">Data Consistency</div>
+                <div id="d1" class="box boxcolor1" onclick="actived1(); check();">Security or Legal Breach</div>
+                <div id="d2" class="box boxcolor2" onclick="actived2(); check();">Data is inconsistent and not correctable by Podium</div>
+                <div id="d3" class="box boxcolor3" onclick="actived3(); check();">Data is inconsistent but correctable by Podium</div>
+                <div id="d4" class="box boxcolor4" onclick="actived4(); check();">No data problems</div>
+
+            </div>
+        </div>
+        <div class="outputbox">
+        <div id="severityrating" class="severityoutput "></div>
+        <img src="podium_logo.png" class="logo">
+    </div>
+    </div>
+    <br>
+    <script defer src="https://connect.podium.com/widget.js#API_TOKEN=ced9853d-df67-4976-8043-c74b61f01b6c" id="podium-widget" data-api-token="ced9853d-df67-4976-8043-c74b61f01b6c"></script>
+<script id="PodiumWebchatWidgetSuppression">
+// Add paths in list here ie: ['/about-us', '/rolex']
+var paths = ['/collections', '/severity.html'];
+// Don't edit code below.
+if (paths.indexOf(window.location.pathname) >= 0) {
+window.podiumWebsiteWidgetLoaded = true;
+}
+</script>
+</script>
+</body>
+
+</html>
