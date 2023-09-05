@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap');
+
+:root {
+    --sev-one-color: #f5006a;
+    --sev-two-color: #FFBE0B;
+    --sev-three-color: #8338EC;
+    --sev-four-color: #27CE2D;
+}
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.matrix {
+    display: flex;
+    flex-direction: column;
+}
+
+.column-headers {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1em;
+    padding: 0.5em 0;
+    font-weight: bold;
+}
+
+.buttons {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1em;
+}
+
+.buttons > button {
+    height: 10em;
+    width: 10em;
+    border-radius: 5px;
+    background-color: inherit;
+    border: 1px solid black;
+}
+
+.buttons > button:hover {
+    box-shadow: 5px 5px 5px 0px gray;
+    cursor: cell;
+    background-color: var(--sev-three-color);
+}
+
+.result {
+    height: 4em;
+}
+
+.selected {
+    font-weight: bold;
+}
