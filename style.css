@@ -3,7 +3,7 @@
 :root {
     --sev-one-color: #f5006a;
     --sev-two-color: #FFBE0B;
-    --sev-three-color: #8338EC;
+    --sev-three-color: #9757EF;
     --sev-four-color: #27CE2D;
 }
 
@@ -48,15 +48,66 @@
 }
 
 .buttons > button:hover {
-    box-shadow: 5px 5px 5px 0px gray;
+    box-shadow: 5px 5px 5px 0px #8fe2d7;
     cursor: cell;
-    background-color: var(--sev-three-color);
 }
 
 .result {
     height: 4em;
+    width: 15em;
+    margin: 1em;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-text {
+    font-size: larger;
+    font-weight: bold;
 }
 
 .selected {
     font-weight: bold;
 }
+
+.row1:hover {
+    background-color: var(--sev-one-color);
+}
+
+.row2:hover {
+    background-color: var(--sev-two-color);
+}
+
+.row3:hover {
+    background-color: var(--sev-three-color);
+}
+
+.row4:hover {
+    background-color: var(--sev-four-color);
+}
+
+.footer {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+}
+
+.footer > a {
+    text-decoration: none;
+    font-size: larger;
+    margin-left: 1em;
+    color: gray;
+}
+
+.logo {
+    width: 15em;
+    opacity: .2;
+}
+
+/* .logo {
+    width: 20%;
+    position: absolute;
+    left: 60%;
+    opacity: .2;
+} */
