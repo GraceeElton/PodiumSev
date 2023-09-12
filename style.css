@@ -11,6 +11,8 @@
     font-family: 'Open Sans', sans-serif;
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
+    border: 0;
 }
 
 .content {
@@ -21,7 +23,7 @@
 }
 
 .title {
-    margin: 1em;
+    margin: 0.7em;
 }
 
 .matrix {
@@ -40,6 +42,7 @@
 .buttons > span {
     text-align: center;
     font-weight: bold;
+    font-size: smaller;
 }
 
 .buttons > button {
@@ -48,6 +51,7 @@
     border-radius: 5px;
     background-color: inherit;
     border: 1px solid black;
+    padding: 0.2em;
 }
 
 .buttons > button:hover {
