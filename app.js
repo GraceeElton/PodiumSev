@@ -53,16 +53,16 @@ function updateResult (arr) {
 
     if (totals >= 30) {
         result.textContent = 'Severity 1';
-        resultBox.style.cssText = 'background-color: #f5006a;';
+        resultBox.style.cssText = 'background-color: #f5006a; border: 2px solid black;';
     } else if (totals < 30 && totals >= 20) {
         result.textContent = 'Severity 2';
-        resultBox.style.cssText = 'background-color: #FFBE0B;';
+        resultBox.style.cssText = 'background-color: #FFBE0B; border: 2px solid black;';
     } else if (totals < 20 && totals >= 12) {
         result.textContent = 'Severity 3';
-        resultBox.style.cssText = 'background-color: #9757EF;';
+        resultBox.style.cssText = 'background-color: #9757EF; border: 2px solid black;';
     } else if (totals < 12) {
         result.textContent = 'Severity 4';
-        resultBox.style.cssText = 'background-color: #27CE2D;';
+        resultBox.style.cssText = 'background-color: #27CE2D; border: 2px solid black;';
     }
 }
 

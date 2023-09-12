@@ -62,11 +62,6 @@
     align-items: center;
 }
 
-.result-text {
-    font-size: larger;
-    font-weight: bold;
-}
-
 .selected {
     font-weight: bold;
 }
