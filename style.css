@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap');
 
 :root {
-    --sev-one-color: #f5006a;
-    --sev-two-color: #FFBE0B;
-    --sev-three-color: #9757EF;
-    --sev-four-color: #27CE2D;
+    --sev-one-color: linear-gradient(#FB7474, #F93939);
+    --sev-two-color: linear-gradient(#FBC037, #F0A905);
+    --sev-three-color: linear-gradient(#479EEB, #1881DC);
+    --sev-four-color: linear-gradient(#66CC79, #38A84D);
 }
 
 * {
     font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
 }
 
 .content {
@@ -23,20 +24,17 @@
     flex-direction: column;
 }
 
-.column-headers {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1em;
-    padding: 0.5em 0;
-    font-weight: bold;
-}
-
 .buttons {
     display: grid;
     grid-auto-flow: column;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: 0.2fr repeat(4, 1fr);
     grid-template-columns: repeat(5, 1fr);
-    gap: 1em;
+    gap: 1.2em;
+}
+
+.buttons > span {
+    text-align: center;
+    font-weight: bold;
 }
 
 .buttons > button {
@@ -48,7 +46,7 @@
 }
 
 .buttons > button:hover {
-    box-shadow: 5px 5px 5px 0px #8fe2d7;
+    box-shadow: 5px 5px 5px 0px #c4c4c4;
     cursor: cell;
 }
 
@@ -64,22 +62,31 @@
 
 .selected {
     font-weight: bold;
+    transition: all 1s ease;
 }
 
 .row1:hover {
-    background-color: var(--sev-one-color);
+    background-image: var(--sev-one-color);
+    transition: all 0.3s ease-out;
+
 }
 
 .row2:hover {
-    background-color: var(--sev-two-color);
+    background-image: var(--sev-two-color);
+    transition: all 0.3s ease-out;
+
 }
 
 .row3:hover {
-    background-color: var(--sev-three-color);
+    background-image: var(--sev-three-color);
+    transition: all 0.3s ease-out;
+
 }
 
 .row4:hover {
-    background-color: var(--sev-four-color);
+    background-image: var(--sev-four-color);
+    transition: all 0.3s ease-out;
+
 }
 
 .footer {
@@ -99,10 +106,3 @@
     width: 15em;
     opacity: .2;
 }
-
-/* .logo {
-    width: 20%;
-    position: absolute;
-    left: 60%;
-    opacity: .2;
-} */

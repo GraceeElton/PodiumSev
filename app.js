@@ -13,13 +13,13 @@ function toggleSelectedStatus(box) {
 function setSelectedColors (box) {
     const weight = box.getAttribute('data-weight');
     if (weight >= 8) {
-        box.style.cssText = 'background-color: #f5006a;';
+        box.style.cssText = 'background-image: linear-gradient(#FB7474, #F93939);';
     } else if (weight <= 7 && weight > 4) {
-        box.style.cssText = 'background-color: #FFBE0B;';
+        box.style.cssText = 'background-image: linear-gradient(#FBC037, #F0A905);';
     } else if (weight <= 4 && weight > 0) {
-        box.style.cssText = 'background-color: #9757EF;';
+        box.style.cssText = 'background-image: linear-gradient(#479EEB, #1881DC);';
     } else if (weight < 1) {
-        box.style.cssText = 'background-color: #27CE2D;';
+        box.style.cssText = 'background-image: linear-gradient(#66CC79, #38A84D);';
     }
 }
 
@@ -53,16 +53,16 @@ function updateResult (arr) {
 
     if (totals >= 30) {
         result.textContent = 'Severity 1';
-        resultBox.style.cssText = 'background-color: #f5006a; border: 2px solid black;';
+        resultBox.style.cssText = 'background-image: linear-gradient(#FB7474, #F93939); border: 2px solid black;';
     } else if (totals < 30 && totals >= 20) {
         result.textContent = 'Severity 2';
-        resultBox.style.cssText = 'background-color: #FFBE0B; border: 2px solid black;';
+        resultBox.style.cssText = 'background-image: linear-gradient(#FBC037, #F0A905); border: 2px solid black;';
     } else if (totals < 20 && totals >= 12) {
         result.textContent = 'Severity 3';
-        resultBox.style.cssText = 'background-color: #9757EF; border: 2px solid black;';
+        resultBox.style.cssText = 'background-image: linear-gradient(#479EEB, #1881DC); border: 2px solid black;';
     } else if (totals < 12) {
         result.textContent = 'Severity 4';
-        resultBox.style.cssText = 'background-color: #27CE2D; border: 2px solid black;';
+        resultBox.style.cssText = 'background-image: linear-gradient(#66CC79, #38A84D); border: 2px solid black;';
     }
 }
 
