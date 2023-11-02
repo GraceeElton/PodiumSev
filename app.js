@@ -73,13 +73,13 @@ function updateResult (totals) {
     if (totals >= sevOne) {
         result.textContent = 'Severity 1';
         resultBox.style.cssText = 'background-image: linear-gradient(#FB7474, #F93939);';
-    } else if (totals < 30 && totals >= 20) {
+    } else if (totals < sevOne && totals >= sevTwo) {
         result.textContent = 'Severity 2';
         resultBox.style.cssText = 'background-image: linear-gradient(#FBC037, #F0A905);';
-    } else if (totals < 20 && totals >= 11) {
+    } else if (totals < sevTwo && totals >= sevThree) {
         result.textContent = 'Severity 3';
         resultBox.style.cssText = 'background-image: linear-gradient(#479EEB, #1881DC);';
-    } else if (totals < 11) {
+    } else if (totals < sevThree) {
         result.textContent = 'Severity 4';
         resultBox.style.cssText = 'background-image: linear-gradient(#66CC79, #38A84D);';
     }
