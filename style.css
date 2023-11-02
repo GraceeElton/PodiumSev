@@ -64,6 +64,10 @@
 .buttons > button:hover {
     cursor: cell;
     color: black;
+    font-weight: bold;
+    font-size: 84%;
+    letter-spacing: normal;
+    border: none;
 }
 
 .result {
