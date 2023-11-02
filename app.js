@@ -4,6 +4,12 @@ const sevTwo = 20;
 const sevThree = 11;
 const sevFour = 0;
 
+//  Color variables for easy updating
+const red = 'background-image: linear-gradient(#FB7474, #F93939);';
+const yellow = 'background-image: linear-gradient(#FBC037, #F0A905);';
+const blue = 'background-image: linear-gradient(#479EEB, #1881DC);';
+const green = 'background-image: linear-gradient(#66CC79, #38A84D);';
+
 //  Adds "selected" class to a box.
 //  Ensures that only one box in each column can have "selected" at once.
 //  Calls setSelectedColors to change the colors
@@ -23,16 +29,16 @@ function setSelectedColors (box) {
     const row = box.classList;
     switch (true) {
         case row.contains('row1'): 
-            box.style.cssText = 'background-image: linear-gradient(#FB7474, #F93939);';
+            box.style.cssText = red;
             break;
         case row.contains('row2'):
-            box.style.cssText = 'background-image: linear-gradient(#FBC037, #F0A905);';
+            box.style.cssText = yellow;
             break;
         case row.contains('row3'):
-            box.style.cssText = 'background-image: linear-gradient(#479EEB, #1881DC);';
+            box.style.cssText = blue;
             break;
         case row.contains('row4'):
-            box.style.cssText = 'background-image: linear-gradient(#66CC79, #38A84D);';
+            box.style.cssText = green;
             break;
     }
 }
@@ -72,16 +78,16 @@ function updateResult (totals) {
 
     if (totals >= sevOne) {
         result.textContent = 'Severity 1';
-        resultBox.style.cssText = 'background-image: linear-gradient(#FB7474, #F93939);';
+        resultBox.style.cssText = red;
     } else if (totals < sevOne && totals >= sevTwo) {
         result.textContent = 'Severity 2';
-        resultBox.style.cssText = 'background-image: linear-gradient(#FBC037, #F0A905);';
+        resultBox.style.cssText = yellow;
     } else if (totals < sevTwo && totals >= sevThree) {
         result.textContent = 'Severity 3';
-        resultBox.style.cssText = 'background-image: linear-gradient(#479EEB, #1881DC);';
+        resultBox.style.cssText = blue;
     } else if (totals < sevThree) {
         result.textContent = 'Severity 4';
-        resultBox.style.cssText = 'background-image: linear-gradient(#66CC79, #38A84D);';
+        resultBox.style.cssText = green;
     }
 }
 
