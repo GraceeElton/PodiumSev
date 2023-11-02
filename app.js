@@ -1,4 +1,12 @@
+//  These are the thresholds for each composite severity
+const sevOne = 30;
+const sevTwo = 20;
+const sevThree = 11;
+const sevFour = 0;
 
+//  Adds "selected" class to a box.
+//  Ensures that only one box in each column can have "selected" at once.
+//  Calls setSelectedColors to change the colors
 function toggleSelectedStatus(box) {
     const columnCells = document.querySelectorAll(`#${box.id}`);
     columnCells.forEach(cell => {
@@ -10,19 +18,29 @@ function toggleSelectedStatus(box) {
     setSelectedColors(box);
 }
 
+//  Styles "selected" boxes based on their rows
 function setSelectedColors (box) {
-    const weight = box.getAttribute('data-weight');
-    if (weight >= 8) {
-        box.style.cssText = 'background-image: linear-gradient(#FB7474, #F93939);';
-    } else if (weight <= 7 && weight > 4) {
-        box.style.cssText = 'background-image: linear-gradient(#FBC037, #F0A905);';
-    } else if (weight <= 4 && weight > 0) {
-        box.style.cssText = 'background-image: linear-gradient(#479EEB, #1881DC);';
-    } else if (weight < 1) {
-        box.style.cssText = 'background-image: linear-gradient(#66CC79, #38A84D);';
+    const row = box.classList;
+    switch (true) {
+        case row.contains('row1'): 
+            box.style.cssText = 'background-image: linear-gradient(#FB7474, #F93939);';
+            break;
+        case row.contains('row2'):
+            box.style.cssText = 'background-image: linear-gradient(#FBC037, #F0A905);';
+            break;
+        case row.contains('row3'):
+            box.style.cssText = 'background-image: linear-gradient(#479EEB, #1881DC);';
+            break;
+        case row.contains('row4'):
+            box.style.cssText = 'background-image: linear-gradient(#66CC79, #38A84D);';
+            break;
     }
 }
 
+//  Creates an array of the data-weight attribute value
+//  of each "selected" box;
+//  When there are 5 numbers in the array, it totals them
+//  And calls updateResult
 function calculateTotals () {
     const selectedBoxes = document.querySelectorAll('.selected');
     const weightsArray = [];
@@ -40,34 +58,37 @@ function calculateTotals () {
     console.log(weightsArray);
 
     if (weightsArray.length >= 5) {
-        updateResult(weightsArray);
+        const totals = weightsArray.reduce((a, b) => a + b);
+        console.log(`severity score: ${totals}`);
+        updateResult(totals);
     }
 }
 
-function updateResult (arr) {
-    let totals = arr.reduce((a, b) => a + b);
-    console.log(`severity score: ${totals}`);
-
+//  Displays the severity based on the number that's passed in
+//  Styles the severity output
+function updateResult (totals) {
     const result = document.querySelector('.result-text');
     const resultBox = document.querySelector('.result');
 
-    if (totals >= 30) {
+    if (totals >= sevOne) {
         result.textContent = 'Severity 1';
         resultBox.style.cssText = 'background-image: linear-gradient(#FB7474, #F93939); border: 2px solid black;';
-    } else if (totals < 30 && totals >= 20) {
+    } else if (totals < sevOne && totals >= sevTwo) {
         result.textContent = 'Severity 2';
         resultBox.style.cssText = 'background-image: linear-gradient(#FBC037, #F0A905); border: 2px solid black;';
-    } else if (totals < 20 && totals >= 11) {
+    } else if (totals < sevTwo && totals >= sevThree) {
         result.textContent = 'Severity 3';
         resultBox.style.cssText = 'background-image: linear-gradient(#479EEB, #1881DC); border: 2px solid black;';
-    } else if (totals < 11) {
+    } else if (totals < sevThree) {
         result.textContent = 'Severity 4';
         resultBox.style.cssText = 'background-image: linear-gradient(#66CC79, #38A84D); border: 2px solid black;';
     }
 }
 
+//  Adds event listeners to the buttons that
+//  Execute all the above functions
 function makeBoxesClickable () {
-    const boxes = document.querySelectorAll('.box');
+    const boxes = document.querySelectorAll('button');
     boxes.forEach(box => {
         box.addEventListener('click', () => {
             toggleSelectedStatus(box);
@@ -75,4 +96,6 @@ function makeBoxesClickable () {
         });
     })
 }
+
+//  Call the function to execute the whole thing
 makeBoxesClickable();
