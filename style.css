@@ -5,6 +5,9 @@
     --sev-two-color: linear-gradient(#FBC037, #F0A905);
     --sev-three-color: linear-gradient(#479EEB, #1881DC);
     --sev-four-color: linear-gradient(#66CC79, #38A84D);
+
+    --page-background: #212121;
+    --white: #F5F5F5;
 }
 
 * {
@@ -13,6 +16,8 @@
     margin: 0;
     padding: 0;
     border: 0;
+    background-color: var(--page-background);
+    color: var(--white);
 }
 
 .content {
@@ -50,15 +55,15 @@
     width: 8.7rem;
     border-radius: 7px;
     background-color: inherit;
-    border: 1px solid black;
+    border: 1px solid var(--white);
     padding: 0.5em;
     font-size: 80%;
     letter-spacing: 0.06rem;
 }
 
 .buttons > button:hover {
-    box-shadow: 5px 5px 5px 0px #c4c4c4;
     cursor: cell;
+    color: black;
 }
 
 .result {
@@ -71,10 +76,17 @@
     align-items: center;
 }
 
+.result-text {
+    background-image: inherit;
+    color: black;
+}
+
 .buttons > .selected {
     font-weight: bold;
     font-size: 84%;
     letter-spacing: normal;
+    color: black;
+    border: none;
 }
 
 .row1:hover {
@@ -107,10 +119,9 @@
     text-decoration: none;
     font-size: larger;
     margin-left: 1em;
-    color: gray;
+    color: var(--white);
 }
 
 .logo {
     width: 15em;
-    opacity: .2;
 }
