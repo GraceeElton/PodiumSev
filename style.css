@@ -46,12 +46,14 @@
 }
 
 .buttons > button {
-    height: 10em;
-    width: 10em;
-    border-radius: 5px;
+    height: 8.7rem;
+    width: 8.7rem;
+    border-radius: 7px;
     background-color: inherit;
     border: 1px solid black;
-    padding: 0.2em;
+    padding: 0.5em;
+    font-size: 80%;
+    letter-spacing: 0.06rem;
 }
 
 .buttons > button:hover {
@@ -62,39 +64,36 @@
 .result {
     height: 4em;
     width: 15em;
-    margin: 1em;
+    margin: 0.5em 0 1em 0;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.selected {
+.buttons > .selected {
     font-weight: bold;
-    transition: all 1s ease;
+    font-size: 84%;
+    letter-spacing: normal;
 }
 
 .row1:hover {
     background-image: var(--sev-one-color);
-    transition: all 0.3s ease-out;
 
 }
 
 .row2:hover {
     background-image: var(--sev-two-color);
-    transition: all 0.3s ease-out;
 
 }
 
 .row3:hover {
     background-image: var(--sev-three-color);
-    transition: all 0.3s ease-out;
 
 }
 
 .row4:hover {
     background-image: var(--sev-four-color);
-    transition: all 0.3s ease-out;
 
 }
 
