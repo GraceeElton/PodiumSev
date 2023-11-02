@@ -57,10 +57,10 @@ function updateResult (arr) {
     } else if (totals < 30 && totals >= 20) {
         result.textContent = 'Severity 2';
         resultBox.style.cssText = 'background-image: linear-gradient(#FBC037, #F0A905); border: 2px solid black;';
-    } else if (totals < 20 && totals >= 12) {
+    } else if (totals < 20 && totals >= 11) {
         result.textContent = 'Severity 3';
         resultBox.style.cssText = 'background-image: linear-gradient(#479EEB, #1881DC); border: 2px solid black;';
-    } else if (totals < 12) {
+    } else if (totals < 11) {
         result.textContent = 'Severity 4';
         resultBox.style.cssText = 'background-image: linear-gradient(#66CC79, #38A84D); border: 2px solid black;';
     }
@@ -76,5 +76,3 @@ function makeBoxesClickable () {
     })
 }
 makeBoxesClickable();
-
-
